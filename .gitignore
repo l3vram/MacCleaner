@@ -1,0 +1,20 @@
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+
+# macOS
+.DS_Store
+
+# Build artifacts (distribute via GitHub Releases, not the repo)
+*.app
+*.dSYM
+*.dmg
+
+# Internal tooling
+.flow/
+plans/
+tasks/

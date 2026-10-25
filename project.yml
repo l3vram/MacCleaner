@@ -1,0 +1,26 @@
+name: MacCleaner
+options:
+  bundleIdPrefix: com.local
+  deploymentTarget:
+    macOS: "13.0"
+  xcodeVersion: "15.0"
+targets:
+  MacCleaner:
+    type: application
+    platform: macOS
+    deploymentTarget: "13.0"
+    sources:
+      - MacCleaner
+    settings:
+      INFOPLIST_FILE: MacCleaner/Info.plist
+      GENERATE_INFOPLIST_FILE: NO
+  MacCleanerTests:
+    type: bundle.unit-test
+    platform: macOS
+    deploymentTarget: "13.0"
+    sources:
+      - MacCleanerTests
+    settings:
+      GENERATE_INFOPLIST_FILE: YES
+    dependencies:
+      - target: MacCleaner
